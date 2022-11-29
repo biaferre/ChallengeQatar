@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var goSomewhere: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        HomeView()
+            .navigationDestination(for: RouteScreen.self) { route in
+                switch route {
+                case .intenseScreen:
+                    ContentView()
+                case .warmupScreen:
+                    ContentView()
+                case .mediumScreen:
+                    ContentView()
+                case .coolScreen:
+                    ContentView()
+                }
+            }
     }
 }
 
