@@ -10,7 +10,12 @@ import SwiftUI
 struct HomeView: View {    
     var body: some View {
         ScrollView {
-            VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 16) {
+                Text("La Chica")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(Color("blue"))
+                    .offset(x:8, y:-34)
+
                 VStack(alignment: .leading) {
                     Text("Etapas")
                         .font(.system(size: 17, weight: .bold))
@@ -28,7 +33,7 @@ struct HomeView: View {
                     NavButton(withRouteLabel: .intenseScreen)
                     NavButton(withRouteLabel: .coolScreen)
                 }
-            }.offset(y: 12)
+            }
         }
     }
 }

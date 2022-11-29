@@ -20,7 +20,7 @@ struct NavButton: View {
                         Text(withRouteLabel.range)
                             .font(.system(size: 12, weight: .regular))
                     }
-                    .padding(8)
+                    .padding(12)
                     Spacer()
                     Image(withRouteLabel.imageName)
                 }.frame(width: 182, height: 65)
