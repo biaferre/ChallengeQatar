@@ -11,58 +11,68 @@ struct DurationView: View {
     @State var beatNameShow: Bool = false
     @State var minutesSelection = 0
     @State var secondsSelection = 0
+    var bpm: Int
+    var minute = 0
+    let second = 0
     
     var minutes = [Int](0..<16)
     var seconds = [Int](0..<60)
-
+    
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Duração")
-                .bold()
-            
-            GeometryReader{ geometry in
-                HStack{
-                    Picker(selection: self.$minutesSelection, label: Text("")) {
+        NavigationStack{
+            VStack(alignment: .leading){
+                Text("Duração")
+                    .bold()
+                
+                GeometryReader{ geometry in
+                    HStack{
+                        Picker(selection: self.$minutesSelection, label: Text("")) {
                             ForEach(0..<self.minutes.count){ index in
                                 Text("\(self.minutes[index])m").tag(index)
                                     .font(.system(size: 30))
                             }
+                            //minute = minutesSelection
                         }
-                    .frame(width: geometry.size.width/2.2, height: 100, alignment: .center)
+                        .frame(width: geometry.size.width/2.2, height: 100, alignment: .center)
                         
-                    Picker(selection: self.$secondsSelection, label: Text("")) {
+                        Picker(selection: self.$secondsSelection, label: Text("")) {
                             ForEach(0..<self.seconds.count){ index in
                                 Text("\(self.seconds[index])s").tag(index)                                    .font(.system(size: 30))
                             }
                         }
-                    .frame(width: geometry.size.width/2.2, height: 100, alignment: .center)
+                        
+                        .frame(width: geometry.size.width/2.2, height: 100, alignment: .center)
+                        
+                    }
+                    .padding(.top, -15)
+                    
+                    
+                    .padding(.leading, 6)
+                    
                 }
-            
-          
-                .padding(.leading, 6)
+                NavigationLink("Seguir", destination: BeatNameView(bpm: bpm, minute: minutesSelection, second: secondsSelection), isActive: $beatNameShow)
+                    .foregroundColor(.white)
+                    .background(.blue)
+                    .cornerRadius(22)
+                    
+                
+                //            }
+                
             }
-            
-            NavigationLink(
-            destination: BeatNameView(), label: {
-                Button(action: {}, label: {
-                    Text("Confirmar")
-                        .frame(maxWidth: .infinity, maxHeight: 44, alignment: .center)
-                        .background(.blue)
-                        .cornerRadius(22)
-                })
-                .buttonStyle(PlainButtonStyle())
-                .disabled(minutesSelection == Int())
-
-            })
+            .padding(.bottom, -20)
             
         }
-        .padding(.bottom, -30)
+    }
+}
 
+struct SegundaNavegacao: View {
+    var body: some View {
+        Text("Vamo lá")
     }
 }
 
 struct DurationView_Previews: PreviewProvider {
     static var previews: some View {
-        DurationView()
+        DurationView(bpm: 0)
     }
 }

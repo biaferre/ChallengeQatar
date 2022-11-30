@@ -12,7 +12,7 @@ struct challengeQatar_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            DurationView()
+            DurationView(bpm: 0)
 //            BeatNameView()
 
         }
