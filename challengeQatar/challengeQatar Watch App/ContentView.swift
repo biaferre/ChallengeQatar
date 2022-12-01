@@ -8,35 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var goSomewhere: Bool = false
+    @State var categorySelected: String
     
     var body: some View {
         HomeView()
             .navigationDestination(for: RouteScreen.self) { route in
                 switch route {
                 case .intenseScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .warmupScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .mediumScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .coolScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .electroScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .tangoScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .bossaScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 case .moreScreen:
-                    ContentView()
+                    ListView(category: categorySelected)
                 }
             }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(categorySelected: "ContentView")
+//    }
+//}

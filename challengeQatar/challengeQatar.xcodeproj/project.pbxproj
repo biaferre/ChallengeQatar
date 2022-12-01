@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D44831372938E2B40014BCB7 /* SeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44831362938E2B40014BCB7 /* SeeMoreButton.swift */; };
+		D44831392938E5720014BCB7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44831382938E5720014BCB7 /* ListView.swift */; };
+		D448313B2938EDFF0014BCB7 /* ExerciseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D448313A2938EDFF0014BCB7 /* ExerciseLoader.swift */; };
+		D44831432938EEA60014BCB7 /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44831422938EEA60014BCB7 /* ExerciseModel.swift */; };
+		D448314529390FD00014BCB7 /* NavButtonAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = D448314429390FD00014BCB7 /* NavButtonAdvanced.swift */; };
 		D4C4F90729366F8200F1FC6E /* challengeQatar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4C4F90C29366F8200F1FC6E /* challengeQatarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */; };
 		D4C4F90E29366F8200F1FC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90D29366F8200F1FC6E /* ContentView.swift */; };
@@ -31,19 +35,23 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		D4C4F91929366F8300F1FC6E /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
 				D4C4F90729366F8200F1FC6E /* challengeQatar Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D44831362938E2B40014BCB7 /* SeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
+		D44831382938E5720014BCB7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D448313A2938EDFF0014BCB7 /* ExerciseLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLoader.swift; sourceTree = "<group>"; };
+		D44831422938EEA60014BCB7 /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
+		D448314429390FD00014BCB7 /* NavButtonAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButtonAdvanced.swift; sourceTree = "<group>"; };
 		D4C4F90029366F8200F1FC6E /* challengeQatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeQatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challengeQatar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challengeQatarApp.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C4F91D293673B200F1FC6E /* NavButton.swift */,
+				D448314429390FD00014BCB7 /* NavButtonAdvanced.swift */,
 				D44831362938E2B40014BCB7 /* SeeMoreButton.swift */,
 			);
 			path = Components;
@@ -118,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				D4C4F9212936817900F1FC6E /* RouteScreen.swift */,
+				D44831422938EEA60014BCB7 /* ExerciseModel.swift */,
+				D448313A2938EDFF0014BCB7 /* ExerciseLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C4F91F29367EEE00F1FC6E /* HomeView.swift */,
+				D44831382938E5720014BCB7 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,11 +241,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44831372938E2B40014BCB7 /* SeeMoreButton.swift in Sources */,
+				D448314529390FD00014BCB7 /* NavButtonAdvanced.swift in Sources */,
 				D4C4F91E293673B200F1FC6E /* NavButton.swift in Sources */,
 				D4C4F92029367EEE00F1FC6E /* HomeView.swift in Sources */,
+				D44831392938E5720014BCB7 /* ListView.swift in Sources */,
 				D4C4F9222936817900F1FC6E /* RouteScreen.swift in Sources */,
+				D44831432938EEA60014BCB7 /* ExerciseModel.swift in Sources */,
 				D4C4F90E29366F8200F1FC6E /* ContentView.swift in Sources */,
 				D4C4F90C29366F8200F1FC6E /* challengeQatarApp.swift in Sources */,
+				D448313B2938EDFF0014BCB7 /* ExerciseLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +314,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LINK_WITH_STANDARD_LIBRARIES = "$(inherited)";
+				"LINK_WITH_STANDARD_LIBRARIES[arch=arm64]" = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

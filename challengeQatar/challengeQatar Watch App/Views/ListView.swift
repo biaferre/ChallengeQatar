@@ -1,13 +1,18 @@
 //
-//  HomeView.swift
+//  ListView.swift
 //  challengeQatar Watch App
 //
-//  Created by Bof on 29/11/22.
+//  Created by Bof on 01/12/22.
 //
 
+import Foundation
+
 import SwiftUI
- 
-struct HomeView: View {    
+
+struct ListView: View {
+//    @Binding var category: String
+    var category: String
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("La Chica")
@@ -18,7 +23,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     
                     VStack(alignment: .leading) {
-                        Text("Etapas")
+                        Text("\(category)")
                             .font(.system(size: 17, weight: .bold))
                             .padding()
                         NavButton(withRouteLabel: .warmupScreen)

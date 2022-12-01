@@ -37,7 +37,7 @@ enum RouteScreen: Hashable {
         case .tangoScreen:
             return "Tango"
         case .electroScreen:
-            return "Eletrônica"
+            return "Techno"
             
         }
     }
