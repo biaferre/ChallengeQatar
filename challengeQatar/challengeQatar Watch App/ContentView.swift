@@ -22,6 +22,14 @@ struct ContentView: View {
                     ContentView()
                 case .coolScreen:
                     ContentView()
+                case .electroScreen:
+                    ContentView()
+                case .tangoScreen:
+                    ContentView()
+                case .bossaScreen:
+                    ContentView()
+                case .moreScreen:
+                    ContentView()
                 }
             }
     }

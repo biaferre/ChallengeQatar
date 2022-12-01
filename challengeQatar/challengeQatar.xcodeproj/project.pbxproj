@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44831372938E2B40014BCB7 /* SeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44831362938E2B40014BCB7 /* SeeMoreButton.swift */; };
 		D4C4F90729366F8200F1FC6E /* challengeQatar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4C4F90C29366F8200F1FC6E /* challengeQatarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */; };
 		D4C4F90E29366F8200F1FC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90D29366F8200F1FC6E /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D44831362938E2B40014BCB7 /* SeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
 		D4C4F90029366F8200F1FC6E /* challengeQatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeQatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challengeQatar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challengeQatarApp.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C4F91D293673B200F1FC6E /* NavButton.swift */,
+				D44831362938E2B40014BCB7 /* SeeMoreButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44831372938E2B40014BCB7 /* SeeMoreButton.swift in Sources */,
 				D4C4F91E293673B200F1FC6E /* NavButton.swift in Sources */,
 				D4C4F92029367EEE00F1FC6E /* HomeView.swift in Sources */,
 				D4C4F9222936817900F1FC6E /* RouteScreen.swift in Sources */,

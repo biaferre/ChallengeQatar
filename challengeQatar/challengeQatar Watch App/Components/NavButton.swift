@@ -20,7 +20,7 @@ struct NavButton: View {
                         Text(withRouteLabel.range)
                             .font(.system(size: 12, weight: .regular))
                     }
-                    .padding(12)
+                    .padding(withRouteLabel.imageName != "piano-icon" ? 12 : 4)
                     Spacer()
                     Image(withRouteLabel.imageName)
                 }.frame(width: 182, height: 65)

@@ -14,6 +14,11 @@ enum RouteScreen: Hashable {
     case intenseScreen
     case mediumScreen
     case coolScreen
+    case moreScreen
+    
+    case bossaScreen
+    case tangoScreen
+    case electroScreen
     
     var title: String {
         switch self {
@@ -25,6 +30,15 @@ enum RouteScreen: Hashable {
             return "Treino inicial"
         case .coolScreen:
             return "Finalizando"
+        case .moreScreen:
+            return "Ver mais"
+        case .bossaScreen:
+            return "Bossa Nova"
+        case .tangoScreen:
+            return "Tango"
+        case .electroScreen:
+            return "Eletrônica"
+            
         }
     }
 
@@ -38,6 +52,14 @@ enum RouteScreen: Hashable {
             return "100-140 Bpm | 20 min"
         case .coolScreen:
             return "90 Bpm | 5 min"
+        case .moreScreen:
+            return ""
+        case .bossaScreen:
+            return "110 Bpm | 15 min"
+        case .tangoScreen:
+            return "110 Bpm | 15 min"
+        case .electroScreen:
+            return "120 Bpm | 15 min"
         }
     }
     
@@ -51,6 +73,14 @@ enum RouteScreen: Hashable {
             return "walking-icon-blue"
         case .coolScreen:
             return "warmup-icon-blue"
+        case .moreScreen:
+            return ""
+        case .bossaScreen:
+            return "guitar-icon"
+        case .tangoScreen:
+            return "sanfona-icon"
+        case .electroScreen:
+            return "piano-icon"
         }
     }
 }
