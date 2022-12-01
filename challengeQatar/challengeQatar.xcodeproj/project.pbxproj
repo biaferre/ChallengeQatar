@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BF639DF293922A700795E2D /* DurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF639DC293922A600795E2D /* DurationView.swift */; };
+		5BF639E0293922A700795E2D /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF639DD293922A600795E2D /* PlayView.swift */; };
+		5BF639E1293922A700795E2D /* BeatNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF639DE293922A600795E2D /* BeatNameView.swift */; };
 		D4C4F90729366F8200F1FC6E /* challengeQatar Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D4C4F90C29366F8200F1FC6E /* challengeQatarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */; };
 		D4C4F90E29366F8200F1FC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C4F90D29366F8200F1FC6E /* ContentView.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5BF639DC293922A600795E2D /* DurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DurationView.swift; path = "../../../../Downloads/ChallengeQatar-feature-screen/challengeQatar Watch App/DurationView.swift"; sourceTree = "<group>"; };
+		5BF639DD293922A600795E2D /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = "../../../../Downloads/ChallengeQatar-feature-screen/challengeQatar Watch App/PlayView.swift"; sourceTree = "<group>"; };
+		5BF639DE293922A600795E2D /* BeatNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeatNameView.swift; path = "../../../../Downloads/ChallengeQatar-feature-screen/challengeQatar Watch App/BeatNameView.swift"; sourceTree = "<group>"; };
 		D4C4F90029366F8200F1FC6E /* challengeQatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeQatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90629366F8200F1FC6E /* challengeQatar Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challengeQatar Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challengeQatarApp.swift; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 			children = (
 				D4C4F90B29366F8200F1FC6E /* challengeQatarApp.swift */,
 				D4C4F90D29366F8200F1FC6E /* ContentView.swift */,
+				5BF639DE293922A600795E2D /* BeatNameView.swift */,
+				5BF639DC293922A600795E2D /* DurationView.swift */,
+				5BF639DD293922A600795E2D /* PlayView.swift */,
 				D4C4F90F29366F8300F1FC6E /* Assets.xcassets */,
 				D4C4F91129366F8300F1FC6E /* Preview Content */,
 			);
@@ -193,7 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C4F90E29366F8200F1FC6E /* ContentView.swift in Sources */,
+				5BF639DF293922A700795E2D /* DurationView.swift in Sources */,
+				5BF639E0293922A700795E2D /* PlayView.swift in Sources */,
 				D4C4F90C29366F8200F1FC6E /* challengeQatarApp.swift in Sources */,
+				5BF639E1293922A700795E2D /* BeatNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
