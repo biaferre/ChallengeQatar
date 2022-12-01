@@ -12,8 +12,8 @@ struct HomeView: View {
         VStack(alignment: .leading) {
             Text("La Chica")
                 .font(.system(size: 16, weight: .medium))
-                .foregroundColor(Color("blue"))
-                .offset(x: 4, y:-20)
+                .foregroundColor(Color("orange"))
+                .offset(x: 4, y: -4)
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     

@@ -66,13 +66,13 @@ enum RouteScreen: Hashable {
     var imageName: String {
         switch self {
         case .warmupScreen:
-            return "warmup-icon-blue"
+            return "stretchup-icon"
         case .intenseScreen:
-            return "running-icon-blue"
+            return "run-icon"
         case .mediumScreen:
-            return "walking-icon-blue"
+            return "walking-icon"
         case .coolScreen:
-            return "warmup-icon-blue"
+            return "stretchdown-icon"
         case .moreScreen:
             return ""
         case .bossaScreen:

@@ -19,7 +19,7 @@ struct NavButtonAdvanced: View {
                 VStack(alignment: .leading) {
                     Text(chosenExercise.title)
                         .font(.system(size: 17, weight: .regular))
-                    Text("\(chosenExercise.bpm) Bpm | \(chosenExercise.duration)min")
+                    Text("\(chosenExercise.bpm) Bpm | \(chosenExercise.duration)")
                         .font(.system(size: 12, weight: .regular))
                 }
                 .padding(8)
