@@ -8,30 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var categorySelected: String
+    var categorySelected: String
     
     var body: some View {
-        HomeView()
-            .navigationDestination(for: RouteScreen.self) { route in
-                switch route {
-                case .intenseScreen:
-                    ListView(category: categorySelected)
-                case .warmupScreen:
-                    ListView(category: categorySelected)
-                case .mediumScreen:
-                    ListView(category: categorySelected)
-                case .coolScreen:
-                    ListView(category: categorySelected)
-                case .electroScreen:
-                    ListView(category: categorySelected)
-                case .tangoScreen:
-                    ListView(category: categorySelected)
-                case .bossaScreen:
-                    ListView(category: categorySelected)
-                case .moreScreen:
-                    ListView(category: categorySelected)
+        NavigationStack {
+            HomeView()
+                .navigationDestination(for: RouteScreen.self) { route in
+                    switch route {
+                    case .intenseScreen:
+                        ListView(category: "Treino intenso")
+                    case .warmupScreen:
+                        ListView(category: "Aquecimento")
+                    case .mediumScreen:
+                        ListView(category: "Treino médio")
+                    case .coolScreen:
+                        ListView(category: "Desacelerando")
+                    case .electroScreen:
+                        ListView(category: categorySelected)
+                    case .tangoScreen:
+                        ListView(category: categorySelected)
+                    case .bossaScreen:
+                        ListView(category: categorySelected)
+                    case .moreScreen:
+                        ListView(category: "Gêneros musicais")
+                    }
                 }
-            }
+        }
     }
 }
 

@@ -10,9 +10,16 @@ import Foundation
 import SwiftUI
 
 struct ListView: View {
-//    @Binding var category: String
+    //    @Binding var category: String
     var category: String
+    var loader = ExerciseLoader()
+    var workoutList: [ExerciseModel] = []
     
+    init(category: String) {
+        self.category = category
+        self.workoutList = loader.load(category: category)
+    }
+        
     var body: some View {
         VStack(alignment: .leading) {
             Text("La Chica")
@@ -20,30 +27,16 @@ struct ListView: View {
                 .foregroundColor(Color("blue"))
                 .offset(x: 4, y:-20)
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    
-                    VStack(alignment: .leading) {
-                        Text("\(category)")
-                            .font(.system(size: 17, weight: .bold))
-                            .padding()
-                        NavButton(withRouteLabel: .warmupScreen)
-                        NavButton(withRouteLabel: .mediumScreen)
-                        NavButton(withRouteLabel: .intenseScreen)
-                        NavButton(withRouteLabel: .coolScreen)
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("Gêneros")
-                                .font(.system(size: 17, weight: .bold))
-                            Spacer()
-                            SeeMoreButton(withRouteLabel: .moreScreen)
-                        }
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("\(category)")
+                        .font(.system(size: 17, weight: .bold))
                         .padding()
-                        NavButton(withRouteLabel: .tangoScreen)
-                        NavButton(withRouteLabel: .bossaScreen)
-                        NavButton(withRouteLabel: .electroScreen)
+                    ForEach(workoutList, id: \.title) { element in
+                        NavButtonAdvanced(chosenExercise: element)
                     }
+                    
+                    
                 }
             }
         }

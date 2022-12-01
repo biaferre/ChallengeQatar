@@ -8,7 +8,6 @@
 import Foundation
 
 class ExerciseLoader {
-    var category: String
     
     var allWarmups: [ExerciseModel] = []
     var allCooldowns: [ExerciseModel] = []
@@ -16,13 +15,9 @@ class ExerciseLoader {
     var allHardTrain: [ExerciseModel] = []
     
     var allMusicGenres: [ExerciseModel] = []
-    
-    init(category: String) {
-        self.category = category
-    }
-    
-    func load() -> [ExerciseModel] {
-        if self.category == "warmups" {
+
+    func load(category: String) -> [ExerciseModel] {
+        if category == "Aquecimento" {
             allWarmups = [
                 ExerciseModel(title: "Alongamento leve", duration: "5", bpm: 90, imageName: "stretch-icon-blue"),
                 ExerciseModel(title: "Caminhada", duration: "15", bpm: 110, imageName: "walking-icon-blue"),
@@ -31,7 +26,7 @@ class ExerciseLoader {
             
             return allWarmups
         }
-        else if self.category == "cooldown" {
+        else if category == "Desacelerando" {
             
             allCooldowns = [
                 ExerciseModel(title: "Esfriando", duration: "10", bpm: 90, imageName: "warmup-icon-blue"),
@@ -40,7 +35,7 @@ class ExerciseLoader {
             
             return allCooldowns
         }
-        else if self.category == "easytrain" {
+        else if category == "Treino médio" {
             
             allEasyTrain = [
                 ExerciseModel(title: "Corrida intensa", duration: "15", bpm: 140, imageName: "running-icon-blue"),
@@ -49,7 +44,7 @@ class ExerciseLoader {
             
             return allEasyTrain
         }
-        else if self.category == "hardtrain" {
+        else if category == "Treino intenso" {
             
             allHardTrain = [
                 ExerciseModel(title: "Zumba 1", duration: "20", bpm: 150, imageName: "zumba-icon"),
@@ -58,7 +53,7 @@ class ExerciseLoader {
             ]
             return allHardTrain
         }
-        else if self.category == "musicgenres" {
+        else if category == "Gêneros musicais" {
             
             allMusicGenres = [
                 ExerciseModel(title: "Valsa 1", duration: "3/4", bpm: 116, imageName: "violin-icon"),

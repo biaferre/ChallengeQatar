@@ -8,6 +8,7 @@
 import Foundation
 
 struct ExerciseModel {
+
     var title: String
     var duration: String // in minutes if exercise, type beat (4/4, 3/4) if music genre
     var bpm: Int
@@ -19,5 +20,5 @@ struct ExerciseModel {
         self.bpm = bpm
         self.imageName = imageName
     }
-    
+
 }
