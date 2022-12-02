@@ -50,13 +50,30 @@ struct DurationView: View {
                     .padding(.leading, 6)
                     
                 }
+//                .navigationDestination(for: RouteScreen.self) { route in
+//                    switch route {
+//                    case .intenseScreen:
+//                        ListView(category: "Treino intenso")
+//                    case .warmupScreen:
+//                        ListView(category: "Aquecimento")
+//                    case .mediumScreen:
+//                        ListView(category: "Treino médio")
+//                    case .coolScreen:
+//                        ListView(category: "Desacelerando")
+//                    case .electroScreen:
+//                        ListView(category: categorySelected)
+//                    case .tangoScreen:
+//                        ListView(category: categorySelected)
+//                    case .bossaScreen:
+//                        ListView(category: categorySelected)
+//                    case .moreScreen:
+//                        ListView(category: "Gêneros musicais")
+//                    }
+//                }
                 NavigationLink("Seguir", destination: BeatNameView(bpm: bpm, minute: minutesSelection, second: secondsSelection), isActive: $beatNameShow)
                     .foregroundColor(.white)
                     .background(.blue)
                     .cornerRadius(22)
-                    
-                
-                //            }
                 
             }
             .padding(.bottom, -20)
