@@ -14,7 +14,8 @@ struct NavButtonAdvanced: View {
     var chosenExercise: ExerciseModel
     
     var body: some View {
-        NavigationLink(destination: {AnyView(_fromValue: (Any).self)}, label: {
+        NavigationLink(destination: {        DurationView(bpm: chosenExercise.bpm)
+}, label: {
             HStack(alignment: .center) {
                 VStack(alignment: .leading) {
                     Text(chosenExercise.title)
