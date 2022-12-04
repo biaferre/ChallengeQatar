@@ -11,7 +11,7 @@ struct DurationView: View {
     @State var beatNameShow: Bool = false
     @State var minutesSelection = 0
     @State var secondsSelection = 0
-    var bpm: Int
+    @State var bpm: Int
     var minute = 0
     let second = 0
     
@@ -50,30 +50,7 @@ struct DurationView: View {
                     .padding(.leading, 6)
                     
                 }
-//                .navigationDestination(for: RouteScreen.self) { route in
-//                    switch route {
-//                    case .intenseScreen:
-//                        ListView(category: "Treino intenso")
-//                    case .warmupScreen:
-//                        ListView(category: "Aquecimento")
-//                    case .mediumScreen:
-//                        ListView(category: "Treino médio")
-//                    case .coolScreen:
-//                        ListView(category: "Desacelerando")
-//                    case .electroScreen:
-//                        ListView(category: categorySelected)
-//                    case .tangoScreen:
-//                        ListView(category: categorySelected)
-//                    case .bossaScreen:
-//                        ListView(category: categorySelected)
-//                    case .moreScreen:
-//                        ListView(category: "Gêneros musicais")
-//                    }
-//                }
-                NavigationLink("Seguir", destination: BeatNameView(bpm: bpm, minute: minutesSelection, second: secondsSelection), isActive: $beatNameShow)
-                    .foregroundColor(.white)
-                    .background(.blue)
-                    .cornerRadius(22)
+                MainActionButton(bpm: $bpm, label: "Seguir")
                 
             }
             .padding(.bottom, -20)
@@ -82,14 +59,14 @@ struct DurationView: View {
     }
 }
 
-struct SegundaNavegacao: View {
-    var body: some View {
-        Text("Vamo lá")
-    }
-}
+//struct SegundaNavegacao: View {
+//    var body: some View {
+//        Text("Vamo lá")
+//    }
+//}
 
-struct DurationView_Previews: PreviewProvider {
-    static var previews: some View {
-        DurationView(bpm: 120)
-    }
-}
+//struct DurationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DurationView(bpm: 120)
+//    }
+//}

@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 struct MainActionButton: View {
+    @Binding var bpm: Int
     var label: String
-    var destination: any View
-
     
     var body: some View {
-        NavigationLink(destination: {destination}, label: {
+        NavigationLink(destination: PlayView(bpm: $bpm), label: {
             Text("\(label)")
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, maxHeight: 44, alignment: .center)                .cornerRadius(22)
@@ -27,8 +26,8 @@ struct MainActionButton: View {
     
 }
 
-struct MainActionButton_Previews: PreviewProvider {
-    static var previews: some View {
-        MainActionButton(label: "Confirmar", destination: PlayView())
-    }
-}
+//struct MainActionButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainActionButton(label: "Confirmar")
+//    }
+//}

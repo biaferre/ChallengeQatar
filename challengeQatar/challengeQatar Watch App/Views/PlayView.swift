@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PlayView: View {
+//    @Binding var duration: Int
+    @Binding var bpm: Int
+    
     var body: some View {
         
         VStack{
@@ -17,18 +20,18 @@ struct PlayView: View {
                     .bold()
                     .padding(.trailing, 9)
                 Image(systemName: "heart")
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("orange"))
                 
             }
             
             HStack(alignment: .center){
-                Text("Bpm")
+                Text("\(bpm) Bpm")
                     .font(.system(size: 12))
                 
-                Text("|")
+                Text ("|")
                     .font(.system(size: 12))
                 
-                Text("min")
+                Text(" min")
                     .font(.system(size: 12))
                 
                     .padding(.leading, 20)
@@ -39,17 +42,19 @@ struct PlayView: View {
                 Image(systemName: "backward.fill")
                     .resizable()
                     .frame(width: 30, height: 21.39)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("orange"))
+
                 
                 Image(systemName: "play.fill")
                     .resizable()
                     .frame(width: 30, height: 34.5)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("orange"))
+
                 
                 Image(systemName: "forward.fill")
                     .resizable()
                     .frame(width: 30, height: 21.39)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("orange"))
             }
             Spacer()
             HStack(alignment: .center){
@@ -57,7 +62,7 @@ struct PlayView: View {
                 Image(systemName: "list.bullet")
                     .resizable()
                     .frame(width: 15.86, height: 12)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color("orange"))
                     .padding(.leading,130)
             }
             
@@ -67,8 +72,8 @@ struct PlayView: View {
     }
 }
 
-struct PlayView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayView()
-    }
-}
+//struct PlayView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlayView()
+//    }
+//}
