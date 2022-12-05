@@ -15,10 +15,6 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
                 .onTapGesture{
-                    while 1<2
-                    {
-                        maracaturapido()
-                    }
                 }
         }
         .padding()
